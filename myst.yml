@@ -9,7 +9,7 @@ project:
       repo: caam37830-sci-comp/notes/
       provider: github
       url: https://mybinder.org
-      ref: master
+      ref: main
   exports:
     - format: pdf
       template: plain_latex_book
