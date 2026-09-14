@@ -4,7 +4,7 @@
 
 ```{tableofcontents}
 ``` -->
-[## Course Website](https://caam37830-sci-comp.github.io/)
+## [Course Website](https://caam37830-sci-comp.github.io/)
 
 
 ## Preface
