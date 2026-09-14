@@ -4,7 +4,7 @@
 # ones at the repo root, so ../environment.yml stays free to describe the
 # full local setup for students installing on their own machines.
 #
-# Two things matter here and are easy to break:
+# Three things matter here and are easy to break:
 #
 # 1. `python` MUST be pinned as an explicit x.y version. repo2docker reads
 #    this pin to choose a prebuilt base image (it has lockfiles for 3.7-3.14).
@@ -18,20 +18,41 @@
 #    Anaconda's `defaults` channel makes the solver swap large parts of the
 #    base env between channels for no benefit.
 #
-# Scoped to the notebooks reachable from the myst.yml TOC. Chapters not yet in
-# the TOC (07_data, 08_geometry, ...) additionally need scikit-learn, sympy,
-# networkx, plotly, seaborn, scikit-image, tqdm and pytorch -- add them here
-# when those chapters are published, mindful that pytorch alone pulls ~120 MB.
+# 3. pytorch and torchvision MUST be constrained to a `cpu*` build. conda-forge
+#    also ships cuda129/cuda130 variants that the solver may otherwise pick;
+#    those add multiple GB to an image that has no GPU to use them.
+#
+# Covers every notebook reachable from the myst.yml TOC.
 name: pycourse-binder
 channels:
   - conda-forge
 dependencies:
   - python=3.12
+
+  # core numerics -- used by nearly every chapter
   - numpy
   - scipy
   # matplotlib-base omits the Qt/GStreamer GUI stack (~150 MB), which a
   # headless container cannot use anyway. Inline plotting is unaffected.
   - matplotlib-base
-  - pandas
   - numba
+
+  # 00_python/bitsbytes
   - bitstring
+  # 02_linear_algebra, 04_functions
+  - sympy
+  # 05_graphs
+  - networkx
+  # 06_probability_statistics, 07_data, 08_geometry
+  - scikit-learn
+  # 07_data
+  - pandas
+  - plotly
+  # 07_data/pandas only does `import seaborn`; seaborn-base skips statsmodels.
+  - seaborn-base
+  # 08_geometry/distances
+  - scikit-image
+  # 02_linear_algebra/pytorch, 07_data/pytorch
+  - pytorch=*=cpu*
+  - torchvision=*=cpu*
+  - tqdm

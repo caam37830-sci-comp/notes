@@ -14,6 +14,7 @@ project:
     - format: pdf
       template: plain_latex_book
       output: exports/book.pdf
+  # Chapter and section ordering follows the outline in todo.txt.
   toc:
     - file: introduction.md
     - file: 00_python/python.md
@@ -42,14 +43,53 @@ project:
         - file: 02_linear_algebra/memory.ipynb
         - file: 02_linear_algebra/numpy_scipy_linalg.ipynb
         - file: 02_linear_algebra/blas_lapack.ipynb
+        - file: 02_linear_algebra/sparse.ipynb
+        - file: 02_linear_algebra/sparse_linalg.ipynb
+        - file: 02_linear_algebra/linearoperators.ipynb
+        - file: 02_linear_algebra/convolutions.ipynb
+        - file: 02_linear_algebra/pytorch.ipynb
+    - file: 03_optimization/optimization.md
+      children:
+        - file: 03_optimization/scipy_opt.ipynb
     - file: 04_functions/functions.md
       children:
         - file: 04_functions/roots.ipynb
+        - file: 04_functions/interpolation.ipynb
+        - file: 04_functions/differentiation.ipynb
+        - file: 04_functions/integration.ipynb
+        - file: 04_functions/sympy.ipynb
+        - file: 04_functions/ode_initial.ipynb
+        - file: 04_functions/bvp.ipynb
+    - file: 05_graphs/graphs.md
+      children:
+        - file: 05_graphs/graphs.ipynb
+        - file: 05_graphs/networkx.ipynb
+        - file: 05_graphs/spectral.ipynb
+    - file: 06_probability_statistics/prob_stat.md
+      children:
+        - file: 06_probability_statistics/generating_random.ipynb
+        - file: 06_probability_statistics/scipy_stats.ipynb
+        - file: 06_probability_statistics/monte_carlo.ipynb
+    - file: 07_data/data.md
+      children:
+        - file: 07_data/pandas.ipynb
+        - file: 07_data/dimension_reduction.ipynb
+        - file: 07_data/sklearn.ipynb
+        - file: 07_data/pytorch.ipynb
+    - file: 08_geometry/geometry.md
+      children:
+        - file: 08_geometry/distances.ipynb
+        - file: 08_geometry/nearestneighbor.ipynb
     - file: 09_computing/computing.md
       children:
         - file: 09_computing/basic_bash.md
+        - file: 09_computing/git.md
+        - file: 09_computing/packages.md
+        - file: 09_computing/unittest.ipynb
         - file: 09_computing/performance/ipython.ipynb
         - file: 09_computing/performance/numpy_ufuncs.ipynb
+        - file: 09_computing/agent_based_models.ipynb
+        - file: 09_computing/rcc/python_env.md
 site:
   options:
     folders: true
