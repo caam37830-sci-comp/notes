@@ -1,0 +1,37 @@
+# Runtime environment for Binder launches from the published book.
+#
+# repo2docker uses ONLY the config files in this directory and ignores the
+# ones at the repo root, so ../environment.yml stays free to describe the
+# full local setup for students installing on their own machines.
+#
+# Two things matter here and are easy to break:
+#
+# 1. `python` MUST be pinned as an explicit x.y version. repo2docker reads
+#    this pin to choose a prebuilt base image (it has lockfiles for 3.7-3.14).
+#    A bare `python=3` is coerced to its default 3.10, but the solver is left
+#    unconstrained and picks the newest Python instead -- so `mamba env update`
+#    then tries to drag the whole preinstalled Jupyter stack across a Python
+#    minor version, and the build dies relinking packages whose extracted
+#    cache was cleaned in an earlier layer.
+#
+# 2. Channel must be conda-forge, matching repo2docker's base image. Mixing in
+#    Anaconda's `defaults` channel makes the solver swap large parts of the
+#    base env between channels for no benefit.
+#
+# Scoped to the notebooks reachable from the myst.yml TOC. Chapters not yet in
+# the TOC (07_data, 08_geometry, ...) additionally need scikit-learn, sympy,
+# networkx, plotly, seaborn, scikit-image, tqdm and pytorch -- add them here
+# when those chapters are published, mindful that pytorch alone pulls ~120 MB.
+name: pycourse-binder
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - scipy
+  # matplotlib-base omits the Qt/GStreamer GUI stack (~150 MB), which a
+  # headless container cannot use anyway. Inline plotting is unaffected.
+  - matplotlib-base
+  - pandas
+  - numba
+  - bitstring
