@@ -1,0 +1,56 @@
+version: 1
+project:
+  title: Scientific Computing with Python
+  authors:
+    - name: Brad Nelson. Adapted by Tristan Goodwill and Tianyu Kong.
+  github: UChi-ComPy23/notes
+  thebe:
+    binder:
+      repo: UChi-ComPy23/notes
+      provider: github
+      url: https://mybinder.org
+      ref: master
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/book.pdf
+  toc:
+    - file: introduction.md
+    - file: 00_python/python.md
+      children:
+        - file: 00_python/conda.md
+        - file: 00_python/jupyter.ipynb
+        - file: 00_python/using_python.md
+        - file: 00_python/basics.ipynb
+        - file: 00_python/bitsbytes.ipynb
+        - file: 00_python/basic_packages.ipynb
+        - file: 00_python/functions.ipynb
+        - file: 00_python/classes.ipynb
+        - file: 00_python/modules.ipynb
+        - file: 00_python/decorators.ipynb
+        - file: 00_python/iterators.ipynb
+        - file: 00_python/pyplot.ipynb
+        - file: 00_python/misc.ipynb
+    - file: 01_analysis/analysis.md
+      children:
+        - file: 01_analysis/asymptotic_notation.ipynb
+        - file: 01_analysis/recursion.ipynb
+        - file: 01_analysis/convergence.ipynb
+        - file: 01_analysis/average_case.ipynb
+    - file: 02_linear_algebra/linear_algebra.md
+      children:
+        - file: 02_linear_algebra/memory.ipynb
+        - file: 02_linear_algebra/numpy_scipy_linalg.ipynb
+        - file: 02_linear_algebra/blas_lapack.ipynb
+    - file: 04_functions/functions.md
+      children:
+        - file: 04_functions/roots.ipynb
+    - file: 09_computing/computing.md
+      children:
+        - file: 09_computing/basic_bash.md
+        - file: 09_computing/performance/ipython.ipynb
+        - file: 09_computing/performance/numpy_ufuncs.ipynb
+site:
+  options:
+    folders: true
+  template: book-theme
