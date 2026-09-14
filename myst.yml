@@ -3,10 +3,10 @@ project:
   title: Scientific Computing with Python
   authors:
     - name: Brad Nelson. Adapted by Tristan Goodwill and Tianyu Kong.
-  github: caam37830-sci-comp/notes/
+  github: caam37830-sci-comp/notes
   thebe:
     binder:
-      repo: caam37830-sci-comp/notes/
+      repo: caam37830-sci-comp/notes
       provider: github
       url: https://mybinder.org
       ref: main
