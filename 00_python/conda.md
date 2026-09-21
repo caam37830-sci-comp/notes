@@ -84,7 +84,7 @@ The first thing you'll want to do is create an environment for this course.
 
 You can also create environments for other courses, research projects etc.  Each environment can have different versions of everything - this makes dependency management easy.
 
-We'll call our environment `pycourse`.  Make sure you specify Python 3.8 in the creation of the environment.
+We'll call our environment `pycourse`.  Make sure you specify Python 3.11 in the creation of the environment.
 
 ```bash
 $ conda create -n pycourse python=3.11
