@@ -21,7 +21,7 @@ project:
       children:
         - file: 00_python/conda.md
         - file: 00_python/jupyter.ipynb
-        ## - file: 00_python/using_python.md
+        - file: 00_python/using_python.md
         - file: 00_python/basics.ipynb
         - file: 00_python/bitsbytes.ipynb
         - file: 00_python/basic_packages.ipynb
