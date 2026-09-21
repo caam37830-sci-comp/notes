@@ -62,10 +62,9 @@ $ python
 ```
 This will launch a Python REPL:
 ```
-Python 3.7.7 (default, May  7 2020, 21:25:33)
-[GCC 7.3.0] :: Anaconda, Inc. on linux
+Python 3.11.16 (main, Aug 27 2026, 14:37:43) [Clang 20.1.8 ] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
->>>
+>>> 
 ```
 type `exit()`, or type `ctrl+d` to exit.
 
@@ -88,7 +87,7 @@ You can also create environments for other courses, research projects etc.  Each
 We'll call our environment `pycourse`.  Make sure you specify Python 3.8 in the creation of the environment.
 
 ```bash
-$ conda create -n pycourse python=3.8
+$ conda create -n pycourse python=3.11
 ```
 You can then activate your environment using
 ```bash
@@ -108,7 +107,7 @@ If you are in your `pycourse` environment, you should see you have a new path to
 ~/miniconda3/envs/pycourse/bin/python
 
 (pycourse) $ python --version
-Python 3.8.3
+Python 3.11.16
 ```
 
 ## Install packages
@@ -136,11 +135,12 @@ You should now have a new command called `ipython`, which is an enhanced version
 Launch `ipython`:
 ```bash
 (pycourse) $ ipython
-Python 3.8.3 (default, Jul  2 2020, 16:21:59)
+Python 3.11.16 (main, Aug 27 2026, 14:37:43) [Clang 20.1.8 ]
 Type 'copyright', 'credits' or 'license' for more information
-IPython 7.18.1 -- An enhanced Interactive Python. Type '?' for help.
+IPython 9.15.0 -- An enhanced Interactive Python. Type '?' for help.
+Tip: Use `--theme`, or the `%colors` magic to change IPython's themes and colors.
 
-In [1]:      
+In [1]:   
 ```
 
 Now try importing a package (hit enter at the end of each line)
