@@ -1,0 +1,49 @@
+# Runs every notebook in the myst.yml table of contents against the pinned
+# Binder environment.
+#
+# The deploy workflow renders whatever outputs are committed, so a notebook
+# whose libraries moved on underneath it keeps publishing stale output that
+# looks fine and fails the moment a student runs the cell. This job is the
+# thing that notices.
+#
+# Deliberately separate from deploy.yml: a flaky execution should block a
+# merge, not block publishing the book.
+name: Execute notebooks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # Upstream releases break notebooks with no commit on our side, so check
+    # weekly (Mondays 06:00 UTC) as well as on changes.
+    - cron: '0 6 * * 1'
+
+concurrency:
+  group: execute-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up the Binder environment
+        uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: .binder/environment.yml
+          cache-environment: true
+          # repo2docker's base image supplies these; outside Binder we add them.
+          create-args: >-
+            nbclient
+            nbformat
+            ipykernel
+
+      - name: Execute notebooks
+        shell: bash -el {0}
+        run: python scripts/execute_notebooks.py --timeout 600
