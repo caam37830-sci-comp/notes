@@ -17,85 +17,160 @@ project:
       template: plain_latex_book
       output: exports/book.pdf
   # Chapter and section ordering follows the outline in todo.txt.
+  # Numbers live here rather than in the page titles so that renumbering a
+  # chapter is a single-file edit.  10_computing is the appendix, so it is
+  # lettered (A, A.1, ...) instead of numbered.
   toc:
     - file: introduction.md
-    - file: 00_python/python.md
+    - title: "1. Python"
+      file: 00_python/python.md
       children:
-        - file: 00_python/conda.md
-        - file: 00_python/jupyter.ipynb
-        - file: 00_python/using_python.md
-        - file: 00_python/basics.ipynb
-        - file: 00_python/bitsbytes.ipynb
-        - file: 00_python/basic_packages.ipynb
-        - file: 00_python/functions.ipynb
-        - file: 00_python/classes.ipynb
-        - file: 00_python/modules.ipynb
-        - file: 00_python/decorators.ipynb
-        - file: 00_python/iterators.ipynb
-        - file: 00_python/pyplot.ipynb
-        - file: 00_python/misc.ipynb
-    - file: 01_analysis/analysis.md
+        - title: "1.1 Installing Anaconda Python"
+          file: 00_python/conda.md
+        - title: "1.2 Installing and Using Jupyter Notebooks"
+          file: 00_python/jupyter.ipynb
+        - title: "1.3 Using Python"
+          file: 00_python/using_python.md
+        - title: "1.4 Basics"
+          file: 00_python/basics.ipynb
+        - title: "1.5 Bits, Bytes, and Numbers"
+          file: 00_python/bitsbytes.ipynb
+        - title: "1.6 Basic Containers and Packages"
+          file: 00_python/basic_packages.ipynb
+        - title: "1.7 Functions"
+          file: 00_python/functions.ipynb
+        - title: "1.8 Object-Oriented Programming"
+          file: 00_python/classes.ipynb
+        - title: "1.9 Modules and Packages"
+          file: 00_python/modules.ipynb
+        - title: "1.10 Decorators"
+          file: 00_python/decorators.ipynb
+        - title: "1.11 Iterators and Generators"
+          file: 00_python/iterators.ipynb
+        - title: "1.12 Matplotlib & PyPlot"
+          file: 00_python/pyplot.ipynb
+        - title: "1.13 Miscellaneous"
+          file: 00_python/misc.ipynb
+    - title: "2. Analysis of Algorithms"
+      file: 01_analysis/analysis.md
       children:
-        - file: 01_analysis/asymptotic_notation.ipynb
-        - file: 01_analysis/recursion.ipynb
-        - file: 01_analysis/convergence.ipynb
-        - file: 01_analysis/average_case.ipynb
-    - file: 02_linear_algebra/linear_algebra.md
+        - title: "2.1 Asymptotic Notation"
+          file: 01_analysis/asymptotic_notation.ipynb
+        - title: "2.2 Recursion"
+          file: 01_analysis/recursion.ipynb
+        - title: "2.3 Convergence of Algorithms"
+          file: 01_analysis/convergence.ipynb
+        - title: "2.4 Average Case Analysis"
+          file: 01_analysis/average_case.ipynb
+    - title: "3. Linear Algebra"
+      file: 02_linear_algebra/linear_algebra.md
       children:
-        - file: 02_linear_algebra/memory.ipynb
-        - file: 02_linear_algebra/numpy_scipy_linalg.ipynb
-        - file: 02_linear_algebra/blas_lapack.ipynb
-        - file: 02_linear_algebra/sparse.ipynb
-        - file: 02_linear_algebra/sparse_linalg.ipynb
-        - file: 02_linear_algebra/linearoperators.ipynb
-        - file: 02_linear_algebra/convolutions.ipynb
-        - file: 02_linear_algebra/pytorch.ipynb
-    - file: 03_optimization/optimization.md
+        - title: "3.1 Memory and Performance"
+          file: 02_linear_algebra/memory.ipynb
+        - title: "3.2 Dense Linear Algebra in NumPy and SciPy"
+          file: 02_linear_algebra/numpy_scipy_linalg.ipynb
+        - title: "3.3 BLAS and LAPACK"
+          file: 02_linear_algebra/blas_lapack.ipynb
+        - title: "3.4 Sparse Matrices"
+          file: 02_linear_algebra/sparse.ipynb
+        - title: "3.5 Sparse Linear Algebra"
+          file: 02_linear_algebra/sparse_linalg.ipynb
+        - title: "3.6 Linear Operators"
+          file: 02_linear_algebra/linearoperators.ipynb
+        - title: "3.7 The Fast Fourier Transform"
+          file: 02_linear_algebra/fft.ipynb
+        - title: "3.8 Convolutions and Fourier Transforms"
+          file: 02_linear_algebra/convolutions.ipynb
+        - title: "3.9 Linear Algebra in PyTorch"
+          file: 02_linear_algebra/pytorch.ipynb
+    - title: "4. Optimization"
+      file: 03_optimization/optimization.md
       children:
-        - file: 03_optimization/scipy_opt.ipynb
-    - file: 04_functions/functions.md
+        - title: "4.1 Optimization in SciPy"
+          file: 03_optimization/scipy_opt.ipynb
+    - title: "5. Functions"
+      file: 04_functions/functions.md
       children:
-        - file: 04_functions/roots.ipynb
-        - file: 04_functions/interpolation.ipynb
-        - file: 04_functions/differentiation.ipynb
-        - file: 04_functions/integration.ipynb
-        - file: 04_functions/sympy.ipynb
-        - file: 04_functions/ode_initial.ipynb
-        - file: 04_functions/bvp.ipynb
-    - file: 05_graphs/graphs.md
+        - title: "5.1 Numerical Functions"
+          file: 04_functions/python_functions.ipynb
+        - title: "5.2 Root Finding"
+          file: 04_functions/roots.ipynb
+        - title: "5.3 Interpolation"
+          file: 04_functions/interpolation.ipynb
+        - title: "5.4 Differentiation"
+          file: 04_functions/differentiation.ipynb
+        - title: "5.5 Integration & Quadrature"
+          file: 04_functions/integration.ipynb
+        - title: "5.6 Symbolic Computing"
+          file: 04_functions/sympy.ipynb
+    - title: "6. Differential Equations"
+      file: 05_differential_equations/differential_equations.md
       children:
-        - file: 05_graphs/graphs.ipynb
-        - file: 05_graphs/networkx.ipynb
-        - file: 05_graphs/spectral.ipynb
-    - file: 06_probability_statistics/prob_stat.md
+        - title: "6.1 Initial Value Problems"
+          file: 05_differential_equations/ode_initial.ipynb
+        - title: "6.2 Boundary Value Problems"
+          file: 05_differential_equations/bvp.ipynb
+        - title: "6.3 Time-Dependent PDEs"
+          file: 05_differential_equations/pde_time_evolution.ipynb
+    - title: "7. Graphs"
+      file: 06_graphs/graphs.md
       children:
-        - file: 06_probability_statistics/generating_random.ipynb
-        - file: 06_probability_statistics/scipy_stats.ipynb
-        - file: 06_probability_statistics/monte_carlo.ipynb
-    - file: 07_data/data.md
+        - title: "7.1 Graphs"
+          file: 06_graphs/graphs.ipynb
+        - title: "7.2 NetworkX"
+          file: 06_graphs/networkx.ipynb
+        - title: "7.3 Spectral Graph Theory"
+          file: 06_graphs/spectral.ipynb
+    - title: "8. Probability and Statistics"
+      file: 07_probability_statistics/prob_stat.md
       children:
-        - file: 07_data/pandas.ipynb
-        - file: 07_data/dimension_reduction.ipynb
-        - file: 07_data/sklearn.ipynb
-        - file: 07_data/pytorch.ipynb
-    - file: 08_geometry/geometry.md
+        - title: "8.1 Generating Random Numbers"
+          file: 07_probability_statistics/generating_random.ipynb
+        - title: "8.2 SciPy stats"
+          file: 07_probability_statistics/scipy_stats.ipynb
+        - title: "8.3 Monte Carlo Methods"
+          file: 07_probability_statistics/monte_carlo.ipynb
+    - title: "9. Data"
+      file: 08_data/data.md
       children:
-        - file: 08_geometry/distances.ipynb
-        - file: 08_geometry/nearestneighbor.ipynb
-    - file: 09_computing/computing.md
+        - title: "9.1 Pandas"
+          file: 08_data/pandas.ipynb
+        - title: "9.2 Dimension Reduction and Data Visualization"
+          file: 08_data/dimension_reduction.ipynb
+        - title: "9.3 SciKit Learn"
+          file: 08_data/sklearn.ipynb
+        - title: "9.4 PyTorch Neural Networks"
+          file: 08_data/pytorch.ipynb
+    - title: "10. Geometry"
+      file: 09_geometry/geometry.md
       children:
-        - file: 09_computing/basic_bash.md
-        - file: 09_computing/git.md
-        - file: 09_computing/packages.md
-        - file: 09_computing/unittest.ipynb
-        - file: 09_computing/performance/ipython.ipynb
-        - file: 09_computing/performance/numpy_ufuncs.ipynb
-        - file: 09_computing/agent_based_models.ipynb
-        - file: 09_computing/rcc/python_env.md
+        - title: "10.1 Distances"
+          file: 09_geometry/distances.ipynb
+        - title: "10.2 Nearest Neighbors"
+          file: 09_geometry/nearestneighbor.ipynb
+    - title: "A. Computing"
+      file: 10_computing/computing.md
+      children:
+        - title: "A.1 Basic Bash"
+          file: 10_computing/basic_bash.md
+        - title: "A.2 Git Version Control"
+          file: 10_computing/git.md
+        - title: "A.3 Packages and Setup"
+          file: 10_computing/packages.md
+        - title: "A.4 Unit Testing"
+          file: 10_computing/unittest.ipynb
+        - title: "A.5 Measuring Performance in Python"
+          file: 10_computing/performance/ipython.ipynb
+        - title: "A.6 Vectorization, Numpy Universal Functions"
+          file: 10_computing/performance/numpy_ufuncs.ipynb
+        - title: "A.7 Agent Based Models"
+          file: 10_computing/agent_based_models.ipynb
+        - title: "A.8 Python on Midway"
+          file: 10_computing/rcc/python_env.md
 site:
   options:
     folders: true
     logo: logo.png
     logo_dark: logo-dark.png
-    favicon: favicon.ico
+    favicon: fav.ico
   template: book-theme

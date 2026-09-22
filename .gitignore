@@ -9,4 +9,4 @@ __pycache__/
 .ipynb_checkpoints/
 00_python/example.csv
 00_python/example2.csv
-05_graphs/bipartite.graph
+06_graphs/bipartite.graph

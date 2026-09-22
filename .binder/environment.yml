@@ -41,18 +41,18 @@ dependencies:
   - bitstring
   # 02_linear_algebra, 04_functions
   - sympy
-  # 05_graphs
+  # 06_graphs
   - networkx
-  # 06_probability_statistics, 07_data, 08_geometry
+  # 07_probability_statistics, 08_data, 09_geometry
   - scikit-learn
-  # 07_data
+  # 08_data
   - pandas
   - plotly
-  # 07_data/pandas only does `import seaborn`; seaborn-base skips statsmodels.
+  # 08_data/pandas only does `import seaborn`; seaborn-base skips statsmodels.
   - seaborn-base
-  # 08_geometry/distances
+  # 09_geometry/distances
   - scikit-image
-  # 02_linear_algebra/pytorch, 07_data/pytorch
+  # 02_linear_algebra/pytorch, 08_data/pytorch
   - pytorch=*=cpu*
   - torchvision=*=cpu*
   - tqdm

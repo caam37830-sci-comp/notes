@@ -6,6 +6,6 @@
 #
 # format:  <path relative to repo root>  #  <reason>
 
-09_computing/agent_based_models.ipynb   # NameError: 'q' is undefined. The cell adds a recovery step to the model but never defines the recovery probability, and it un-enlightens pop[j] using the leaked inner-loop variable rather than pop[i]. Needs an authoring decision about the intended model, not a mechanical fix.
+10_computing/agent_based_models.ipynb   # NameError: 'q' is undefined. The cell adds a recovery step to the model but never defines the recovery probability, and it un-enlightens pop[j] using the leaked inner-loop variable rather than pop[i]. Needs an authoring decision about the intended model, not a mechanical fix.
 02_linear_algebra/pytorch.ipynb         # Calls B.cuda(); AssertionError on any machine without a GPU, including CI runners.
-07_data/pytorch.ipynb                   # Downloads the MNIST dataset over the network on every run.
+08_data/pytorch.ipynb                   # Downloads the MNIST dataset over the network on every run.
