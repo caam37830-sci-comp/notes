@@ -41,3 +41,10 @@ If you're serious about scientific computing, I would recommend (at least) learn
 
 This book organizes material into chapters that more or less contain information about a single topic.  This is done in an attempt to organize information in a sensible way.  However, it is not intended to be read or taught in the sequential order seen in the table of contents.  The course will carve some path through the content of the book, and any reader can likewise choose their own adventure through the content.
 
+### Running the code
+
+Most chapters of this book are Jupyter notebooks, and every one of them can be run.
+Click the **Open in Colab** badge under the title of a notebook to open a copy of it in
+[Google Colab](https://colab.research.google.com/), which needs nothing but a browser
+and a Google account.  See [Installing and Using Jupyter Notebooks](00_python/jupyter.ipynb)
+for more on Colab, and for how to set Python up on your own machine.
