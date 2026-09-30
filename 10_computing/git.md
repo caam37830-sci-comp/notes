@@ -17,4 +17,8 @@ It can also help with fixing bugs (say you made some changes that severely break
 
 You can also **tag** the repository with different versions.
 
+
+See the [git tutorial](https://github.com/caam37830/git-tutorial).
+
+
 ![git](https://imgs.xkcd.com/comics/git.png)
