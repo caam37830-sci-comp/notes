@@ -77,11 +77,9 @@ project:
           file: 02_linear_algebra/sparse_linalg.ipynb
         - title: "3.6 Linear Operators"
           file: 02_linear_algebra/linearoperators.ipynb
-        - title: "3.7 The Fast Fourier Transform"
-          file: 02_linear_algebra/fft.ipynb
-        - title: "3.8 Convolutions and Fourier Transforms"
+        - title: "3.7 Convolutions and Fourier Transforms"
           file: 02_linear_algebra/convolutions.ipynb
-        - title: "3.9 Linear Algebra in PyTorch"
+        - title: "3.8 Linear Algebra in PyTorch"
           file: 02_linear_algebra/pytorch.ipynb
     - title: "4. Optimization"
       file: 03_optimization/optimization.md
