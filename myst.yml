@@ -89,17 +89,15 @@ project:
     - title: "5. Functions"
       file: 04_functions/functions.md
       children:
-        - title: "5.1 Numerical Functions"
-          file: 04_functions/python_functions.ipynb
-        - title: "5.2 Root Finding"
+        - title: "5.1 Root Finding"
           file: 04_functions/roots.ipynb
-        - title: "5.3 Interpolation"
+        - title: "5.2 Interpolation"
           file: 04_functions/interpolation.ipynb
-        - title: "5.4 Differentiation"
+        - title: "5.3 Differentiation"
           file: 04_functions/differentiation.ipynb
-        - title: "5.5 Integration & Quadrature"
+        - title: "5.4 Integration & Quadrature"
           file: 04_functions/integration.ipynb
-        - title: "5.6 Symbolic Computing"
+        - title: "5.5 Symbolic Computing"
           file: 04_functions/sympy.ipynb
     - title: "6. Differential Equations"
       file: 05_differential_equations/differential_equations.md
