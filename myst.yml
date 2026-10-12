@@ -106,7 +106,7 @@ project:
       children:
         - title: "6.1 Initial Value Problems"
           file: 05_differential_equations/ode_initial.ipynb
-        - title: "6.2 ODE Solvers: Accuracy, Stability, and Stiffness"
+        - title: "6.2 Accuracy, Stability, and Stiffness"
           file: 05_differential_equations/ode_solvers.ipynb
         - title: "6.3 Boundary Value Problems"
           file: 05_differential_equations/bvp.ipynb
