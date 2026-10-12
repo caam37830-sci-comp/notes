@@ -86,6 +86,8 @@ project:
       children:
         - title: "4.1 Optimization in SciPy"
           file: 03_optimization/scipy_opt.ipynb
+        - title: "4.2 Optimization Algorithms"
+          file: 03_optimization/optimization_algorithms.ipynb
     - title: "5. Functions"
       file: 04_functions/functions.md
       children:
@@ -104,10 +106,14 @@ project:
       children:
         - title: "6.1 Initial Value Problems"
           file: 05_differential_equations/ode_initial.ipynb
-        - title: "6.2 Boundary Value Problems"
+        - title: "6.2 ODE Solvers: Accuracy, Stability, and Stiffness"
+          file: 05_differential_equations/ode_solvers.ipynb
+        - title: "6.3 Boundary Value Problems"
           file: 05_differential_equations/bvp.ipynb
-        - title: "6.3 Time-Dependent PDEs"
+        - title: "6.4 Time-Dependent PDEs"
           file: 05_differential_equations/pde_time_evolution.ipynb
+        - title: "6.5 Spectral Methods"
+          file: 05_differential_equations/spectral_methods.ipynb
     - title: "7. Graphs"
       file: 06_graphs/graphs.md
       children:
@@ -126,6 +132,8 @@ project:
           file: 07_probability_statistics/scipy_stats.ipynb
         - title: "8.3 Monte Carlo Methods"
           file: 07_probability_statistics/monte_carlo.ipynb
+        - title: "8.4 Stochastic Simulation"
+          file: 07_probability_statistics/stochastic_simulation.ipynb
     - title: "9. Data"
       file: 08_data/data.md
       children:
@@ -137,6 +145,8 @@ project:
           file: 08_data/sklearn.ipynb
         - title: "9.4 PyTorch Neural Networks"
           file: 08_data/pytorch.ipynb
+        - title: "9.5 Scientific Machine Learning with PyTorch"
+          file: 08_data/sciml_pytorch.ipynb
     - title: "10. Geometry"
       file: 09_geometry/geometry.md
       children:
