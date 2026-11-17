@@ -139,10 +139,10 @@ project:
       children:
         - title: "9.1 Pandas"
           file: 08_data/pandas.ipynb
-        - title: "9.2 Dimension Reduction and Data Visualization"
-          file: 08_data/dimension_reduction.ipynb
-        - title: "9.3 SciKit Learn"
+        - title: "9.2 SciKit Learn"
           file: 08_data/sklearn.ipynb
+        - title: "9.3 Dimension Reduction and Data Visualization"
+          file: 08_data/dimension_reduction.ipynb
         - title: "9.4 PyTorch Neural Networks"
           file: 08_data/pytorch.ipynb
         - title: "9.5 Scientific Machine Learning with PyTorch"
